@@ -1,49 +1,206 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Spock framework</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="white">
+				<h1>Spock Framework</h1>
+				<h3>the enterprise ready specification framework</h3>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Pourquoi spock ?</h2>
+					<p class="fragment">A vous de juger à la fin</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h3>Equivalence avec Junit</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Spock</th>
+								<th>JUnit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Specification</p>
+								</td>
+								<td>
+									<p>Test class</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><code>setup()</code></p>
+								</td>
+								<td>
+									<p><code>@Before</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><code>cleanup()</code></p>
+								</td>
+								<td>
+									<p><code>@After</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><code>setupSpec()</code></p>
+								</td>
+								<td>
+									<p><code>@BeforeClass</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><code>cleanupSpec()</code></p>
+								</td>
+								<td>
+									<p><code>@AfterClass</code></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<table>
+						<thead>
+							<tr>
+								<th>Spock</th>
+								<th>JUnit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Feature</p>
+								</td>
+								<td>
+									<p>Test</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Feature method</p>
+								</td>
+								<td>
+									<p>Test method</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Data-driven feature</p>
+								</td>
+								<td>
+									<p>Theory</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Condition</p>
+								</td>
+								<td>
+									<p>Assertion</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<table>
+						<thead>
+							<tr>
+								<th>Spock</th>
+								<th>JUnit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Exception condition</p>
+								</td>
+								<td>
+									<p><code>@Test(expected=…​)</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Interaction</p>
+								</td>
+								<td>
+									<p>Mock expectation (e.g. in Mockito)</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+			<section data-background="white">
+				Test simple
+			</section>
+			<section data-background="white">
+				<section>
+					Test paramétré
+				</section>
+				<section>
+					@Unroll
+				</section>
+			</section>
+			<section data-background="white">
+				Mock and Stub
+			</section>
+			<section data-background="white">
+				@Requires
+				@IgnoreIf
+				@Stepwise
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
