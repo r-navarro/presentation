@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Code review</title>
+
+	<link rel="stylesheet" href="../css/reveal.css">
+	<link rel="stylesheet" href="../css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../css/print/pdf.css' : '../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="white">
+				<h1>Code review</h1>
+				<h3>sous titre que je ne connais pas encore</h3>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Revue de code ?</h2>
+					<p class="fragment">Examen du code source</p>
+					<p class="fragment">Manuelle ? </p>
+					<p class="fragment">Automatique ? </p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Pourquoi ?</h2>
+					<p class="fragment">Respect des règles de codage</p>
+					<p class="fragment">Détection de bugs</p>
+					<p class="fragment">Lisibilité du code</p>
+					<p class="fragment">Vérifier que les tests testent les bonnes choses</p>
+					<p class="fragment">Partager les connaissances</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Quand ?</h2>
+					<p class="fragment">A la fin</p>
+					<p class="fragment">Au fur et à mesure</p>
+					<p class="fragment">Après le merge</p>
+				</section>
+				<section>
+					<h2>Quand est ce fini ?</h2>
+					<p class="fragment">Quand tous les relecteurs sont d'accord ?</p>
+					<p class="fragment">Quand le lead technique est d'accord ?</p>
+					<p class="fragment">Quand on n'a pas le temps ?</p>
+					<p class="fragment">Quand il n'y a plus de commentaires ?</p>
+				</section>
+				<section>
+					<h2>Quand faire les reviews ?</h2>
+					<p class="fragment">Dès que la pull request est disponible ?</p>
+					<p class="fragment">créneau horaire prévu ?</p>
+					<p class="fragment">Quand on veut / peut</p>
+					<p class="fragment">Un ou deux jours par semaine d'empty box</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Qui ?</h2>
+					<p class="fragment">Toute l'équipe ?</p>
+					<p class="fragment">Au hasard</p>
+					<p class="fragment">Les séniors</p>
+					<p class="fragment">Les juniors</p>
+					<p class="fragment">Au moins 2 (disponibles !) mais pas trop</p>
+					<p class="fragment">Les personnes ayant travaillé sur la même partie de code (git-guilt, plugin,
+						..)</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Où ?</h2>
+					<p class="fragment">Bit bucket</p>
+					<p class="fragment">Outils ?</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Quoi ?</h2>
+					<h3 class="fragment">S.O.L.I.D</h3>
+					<p class="fragment">Responsabilité unique (single responsibility principle)</p>
+					<p class="fragment">Ouvert / fermé (open/closed principle)</p>
+					<p class="fragment">Substitution de Barbara Liskov (Liskov substitution principle)</p>
+					<p class="fragment">Ségrégation des interfaces (interface segregation principle)</p>
+					<p class="fragment">Inversion des dépendances (dependency inversion principle)</p>
+				</section>
+				<section>
+					<h2>Responsabilité unique (single responsibility principle)</h2>
+					<p class="fragment">Une classe ne doit changer que pour une seule raison (Robert C. Martin)</p>
+				</section>
+				<section>
+					<h2>Ouvert / fermé (open/closed principle)</h2>
+					<p class="fragment">Une classe doit être ouverte aux extensions mais fermée aux modifications
+						(Bertrand Meyer)</p>
+				</section>
+				<section>
+					<h2>Substitution de Barbara Liskov (Liskov substitution principle)</h2>
+					<p class="fragment">Si q(x) est une propriété démontrable pour tout objet x de type T, alors q(y)
+						est vraie pour tout objet y
+						de type S tel que S est un sous-type de T</p>
+					<p class="fragment">On doit pouvoir remplacer une instance de classe parente par une instance d'une
+						classe fille sans effets de bord</p>
+				</section>
+				<section>
+					<h2>Ségrégation des interfaces</h2>
+					<p class="fragment">Aucun client ne devrait dépendre de méthodes qu'il n'utilise pas</p>
+					<p class="fragment">Division des interfaces</p>
+				</section>
+				<section>
+					<h2>Inversion des dépendances</h2>
+					<p class="fragment">Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau.
+						Les deux doivent dépendre d'abstractions.</p>
+					<p class="fragment">Les abstractions ne doivent pas dépendre des détails. Les détails
+						(implémentations) doivent dépendre des abstractions.</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Quoi ?</h2>
+					<p class="fragment">La fonctionnalité</p>
+					<p class="fragment">Est elle bien testée ?</p>
+					<p class="fragment">Sécurité</p>
+					<p class="fragment">Complexité</p>
+				</section>
+			</section>
+			<section data-background="white">
+				<section>
+					<h2>Après ?</h2>
+					<p class="fragment">On corrige, qui ? L'auteur !!</p>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="../lib/js/head.min.js"></script>
+	<script src="../js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: '../plugin/markdown/marked.js' },
+				{ src: '../plugin/markdown/markdown.js' },
+				{ src: '../plugin/notes/notes.js', async: true },
+				{ src: '../plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
